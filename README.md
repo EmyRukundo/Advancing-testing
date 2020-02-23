@@ -66,3 +66,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+### Testing react with Jest
+
+
+Jest is a fast JavaScript testing utility by Facebook that enables you to get started with testing your JavaScript code with zero configuration.
