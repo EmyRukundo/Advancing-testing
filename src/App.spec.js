@@ -44,6 +44,22 @@ describe('App', () => {
     const counterWrapper = wrapper.find(Counter);
     expect(counterWrapper.find('p').text()).toBe('-1');
   });
+  it('fetches async data but fails', done => {
+    const promise = new Promise((resolve, reject) =>
+      setTimeout(() => reject(new Error('Whoops!')), 100)
+    );
+    axios.get = jest.fn(() => promise);
+    const wrapper = mount(<App />);
+    promise.catch(() => {
+      setImmediate(() => {
+        wrapper.update();
+        expect(wrapper.find('li').length).toEqual(0);
+        expect(wrapper.find('.error').length).toEqual(1);
+        axios.get.mockClear();
+        done();
+      });
+    });
+  });
 });
 describe('Reducer', () => {
   it('fetches async data', () => {
