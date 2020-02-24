@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { mount } from 'enzyme';
+import { mount } from './enzyme';
 import axios from 'axios';
 import App, { Counter, dataReducer } from './App';
 const list = ['a', 'b', 'c'];
