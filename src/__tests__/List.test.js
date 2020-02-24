@@ -1,13 +1,13 @@
 import React from 'react';
-import { shallow } from '../../enzyme.js';
+import { shallow, mount } from '../enzyme';
 
-import List from '../Lists.js';
+import List from '../components/Lists';;
 
 
 describe('List tests', () => {
     it('renders list-items', () => {
         const items =  ['one', 'two', 'three' ];
-        const wrapper = shallow(<List items={items} />);
+        const wrapper = mount(<List items={items} />);
 
 
         //Expect the wrapper object to be defined
