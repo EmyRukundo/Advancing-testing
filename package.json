@@ -23,10 +23,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "setupFiles": "./src/setupTests.js",
-    "tests": "jest --coverage -u"
+    "test": "jest --coverage -u",
+    "test:coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "eslintConfig": {
     "extends": "react-app"
